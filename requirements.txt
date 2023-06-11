@@ -52,3 +52,4 @@ urllib3==1.26.16
 uvicorn==0.22.0
 Werkzeug==2.3.5
 wrapt==1.14.1
+pillow==8.3.2
