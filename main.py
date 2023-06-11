@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("saved_model/my_model.h5")
+MODEL = tf.keras.models.load_model("my_model.h5")
 
 CLASS_NAMES = ["Nitrogen", "Phosphorus", "Potassium"]
 
