@@ -54,7 +54,7 @@ async def predict(
     return {
         'class': predicted_class,
         'confidence': float(confidence),
-        'description': 'Tanaman tersebut dideteksi kekurangan nutrisi ' + predicted_class
+        'description': 'Kekurangan nutrisi ' + predicted_class
     }
 
 if __name__ == "__main__":
