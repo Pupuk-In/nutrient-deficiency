@@ -22,7 +22,9 @@ app.add_middleware(
 
 MODEL = tf.keras.models.load_model("my_model.h5")
 
-CLASS_NAMES = ["Nitrogen", "Phosphorus", "Potassium"]
+CLASS_NAMES = ["Nitrogen",
+               "Phosphorus",
+               "Potassium"]
 
 @app.get("/")
 async def index():
@@ -48,9 +50,11 @@ async def predict(
 
     predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])
+
     return {
         'class': predicted_class,
-        'confidence': float(confidence)
+        'confidence': float(confidence),
+        'description': 'Tanaman tersebut dideteksi kekurangan nutrisi ' + predicted_class
     }
 
 if __name__ == "__main__":
